@@ -18,7 +18,8 @@ def get_member_count(invite_link : str) -> str:
         return "NULL"
 
     try:
-        response = requests.get(invite_link)
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36","Accept": "application/json","Accept-Language": "fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3","Accept-Encoding": "gzip, deflate","Connection": "keep-alive"}
+        response = requests.get(invite_link, headers=headers)
     except:
         return "NULL"
 
