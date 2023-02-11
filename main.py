@@ -5,7 +5,7 @@ def extract_numbers(text : str) -> str or None:
 
     match = re.search(r'\b\d{1,3}(,\d{3})*\b', text)
 
-    if match != True:
+    if len(match) == 0 or match is None:
 
         return None
     
