@@ -5,7 +5,7 @@ def extract_numbers(text : str) -> str or None:
 
     match = re.search(r'\b\d{1,3}(,\d{3})*\b', text)
 
-    if len(match) == 0 or match is None:
+    if len(match.group(0)) == 0 or match.group(0) is None:
 
         return None
     
@@ -39,6 +39,6 @@ def get_member_count(invite_link : str) -> str:
 
     return data
 
-member_count = get_member_count("https://discord.gg/exemple")
+member_count = get_member_count("https://discord.gg/fp6fB7YbCZ")
 
 print(member_count)
