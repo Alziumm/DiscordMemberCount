@@ -39,6 +39,6 @@ def get_member_count(invite_link : str) -> str:
 
     return data
 
-member_count = get_member_count("https://discord.gg/fp6fB7YbCZ")
+member_count = get_member_count("https://discord.gg/exemple")
 
 print(member_count)
